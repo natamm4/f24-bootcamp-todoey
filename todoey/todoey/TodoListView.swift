@@ -11,6 +11,10 @@ struct TodoListView: View {
     @State private var todoList = TodoItems()
     @State private var newTodo: String = ""
     
+    var todoCount: Int {
+        return todoList.items.count
+    }
+    
     //var todoItems: TodoItems
     
     var body: some View {
@@ -35,7 +39,7 @@ struct TodoListView: View {
                 Image(systemName: "plus.circle.fill")
                 Text("Todo")
             }
-            .navigationTitle("Todoey")
+            .navigationTitle("Todoey \(todoCount)")
         }
     }
     func removeItems(at offsets: IndexSet) {

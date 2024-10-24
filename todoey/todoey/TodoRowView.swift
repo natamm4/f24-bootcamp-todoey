@@ -19,7 +19,7 @@ struct TodoRowView: View {
             }
             TextField("\(todo.text)", text: $todo.text)
             }
-        .navigationTitle("Todoey")
+        //.navigationTitle("Todoey")
         }
 }
 
